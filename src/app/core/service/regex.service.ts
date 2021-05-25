@@ -8,7 +8,6 @@ export class RegexCommon {
 
 		numeric = '/^[1-9]\d{6,10}$/';
 
-		
 		numbers = '^[0-9]+$';
 
 		cuil = '^[0-9-]*$';
@@ -19,6 +18,11 @@ export class RegexCommon {
 
 		// Split regex to password
 		specialCharacter = new RegExp(/\W|_/g);
+
 		number = new RegExp(/\d/);
+
 		upperCase = new RegExp(/[A-Z]/);
+
+    email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { RequesterService } from "../../core/service/requester.service";
+import { RequesterService } from "../../../core/service/requester.service";
 
 
 @Injectable({

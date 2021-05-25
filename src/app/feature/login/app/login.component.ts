@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from "../../models/User";
-import { LoginService } from "./login.service";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { RegexCommon } from "../../core/service/regex.service";
-import { LoginFormService } from "./login-form.service";
+import { User } from "../models/User";
+import { LoginService } from "../services/login.service";
+import { FormGroup } from "@angular/forms";
+import { LoginFormService } from "../services/login-form.service";
+import { Router } from "@angular/router";
 
 @Component( {
   selector: 'app-login',
@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private loginService: LoginService,
-    private loginFormService: LoginFormService
+    private loginFormService: LoginFormService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -28,12 +29,12 @@ export class LoginComponent implements OnInit {
   }
 
   public enviar(): void {
-    if(this.miForm.valid){
+    if(this.miForm.invalid){
       const datos = this.miForm.value;
       console.log(datos);
+      return;
     } else {
-
-      console.log("form invalid");
+      this.router.navigate(['home']);
     }
 
   }

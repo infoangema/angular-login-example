@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder, Validators } from "@angular/forms";
-import { RegexCommon } from "../../core/service/regex.service";
+import { RegexCommon } from "../../../core/service/regex.service";
 
 @Injectable({
   providedIn: 'root'
